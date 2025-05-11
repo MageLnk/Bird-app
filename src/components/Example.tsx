@@ -5,6 +5,8 @@ const GET_BIRDS = gql`
     birds {
       id
       english_name
+      latin_name
+      thumb_url
     }
   }
 `;
@@ -19,14 +21,36 @@ export const Example = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
+  console.log("Response from server", data);
   return (
-    <div>
-      {data &&
-        data.birds.map((bird: any) => (
-          <div key={bird.id}>
-            <h2>{bird.english_name}</h2>
-          </div>
-        ))}
-    </div>
+    <ul>
+      {data.birds.map((bird: any) => (
+        <li key={bird.id}>{bird.english_name}</li>
+      ))}
+    </ul>
   );
 };
+
+// ----------------------------------------
+// import { gql } from "@apollo/client";
+// import { useEffect } from "react";
+// import { client } from "../lib/apollo";
+
+// export const Example = () => {
+//   useEffect(() => {
+//     client
+//       .query({
+//         query: gql`
+//           query Birds {
+//             birds {
+//               id
+//               english_name
+//             }
+//           }
+//         `,
+//       })
+//       .then((result) => console.log(result.data));
+//   }, []);
+
+//   return <div />;
+// };
