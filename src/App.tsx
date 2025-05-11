@@ -1,8 +1,10 @@
+import RoutesApp from "./routes/RoutesApp";
+
 const App = () => {
   return (
-    <div>
-      <p>Ola k ase</p>
-    </div>
+    <main>
+      <RoutesApp />
+    </main>
   );
 };
 
