@@ -1,0 +1,46 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as mix;
+
+.sidebar {
+  max-width: 30.7rem;
+  width: 100%;
+  height: 100%;
+  background-color: v.$bg-darker-white;
+  border-right: 1px solid v.$bg-border-light-gray;
+
+  &__contentContainer {
+    padding: 1.6rem;
+    width: 27.5rem;
+    height: 27.8rem;
+    display: flex;
+    flex-direction: column;
+
+    .contentContainer__title {
+      h3 {
+        @include mix.stylesText(
+          v.$text-dark-blue,
+          v.$font-size-md,
+          v.$weight-extra-regular,
+          2.1rem
+        );
+      }
+    }
+
+    .contentContainer__owner {
+      p {
+        @include mix.stylesText(
+          v.$text-light-blue,
+          v.$font-size-sm,
+          v.$weight-regular,
+          2.1rem
+        );
+      }
+    }
+
+    .contentContainer__nav {
+      margin-top: 1.6rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
