@@ -1,19 +1,24 @@
 // Components
+import { BirdList } from './BirdList/BirdList';
 import { SearchBirdBar } from './SearchBirdBar/SearchBirdBar';
 // Styles
 import styles from './Home.module.scss';
 // App
 const Home = () => {
   return (
-    <div className={styles.home}>
-      <div className={styles.home__title}>
+    <section className={styles.home}>
+      <section className={styles.home__title}>
         <h1>Birds</h1>
-      </div>
+      </section>
 
-      <div className={styles.home__searchBirdBar}>
+      <section className={styles.home__searchBirdBar}>
         <SearchBirdBar />
-      </div>
-    </div>
+      </section>
+
+      <section className={styles.home__birdList}>
+        <BirdList />
+      </section>
+    </section>
   );
 };
 

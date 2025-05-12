@@ -10,6 +10,13 @@ export default defineConfig(({ mode }) => {
       proxy: {
         '/api/graphql': env.GRAPHQL_ENDPOINT
       }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        }
+      }
     }
   };
 });
