@@ -1,11 +1,7 @@
 import RoutesApp from "./routes/RoutesApp";
 
 const App = () => {
-  return (
-    <main>
-      <RoutesApp />
-    </main>
-  );
+  return <RoutesApp />;
 };
 
 export default App;

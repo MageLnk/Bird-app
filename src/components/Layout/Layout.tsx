@@ -1,22 +1,17 @@
 import { Outlet } from "react-router-dom";
-// APp
+// Styles
+import styles from "./Layout.module.scss";
+// App
 const Layout = () => {
   return (
-    <div>
-      <header>
-        <h1>My App</h1>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/bird/1">Bird</a>
-        </nav>
+    <main className={styles.layoutContainer}>
+      <header className={styles.layoutContainer__sidebarContainer}>
+        <p>Sidebar</p>
       </header>
-      <main>
+      <main className={styles.layoutContainer__mainContainer}>
         <Outlet />
       </main>
-      <footer>
-        <p>© 2025 My App</p>
-      </footer>
-    </div>
+    </main>
   );
 };
 
