@@ -1,0 +1,33 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as mix;
+
+.searchBirdBar {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.6rem;
+    transform: translateY(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    background-image: url('./images/magnifyingGlass.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  input {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    background-color: #f1f4f8;
+    border: none;
+    padding-left: 5.2rem;
+    border-radius: 0.8rem;
+
+    &::placeholder {
+      @include mix.stylesText(v.$text-light-blue, v.$font-size-md, v.$weight-regular, 2.4rem);
+    }
+  }
+}
