@@ -5,7 +5,8 @@ $desktop: 1024px;
 $desktopL: 1440px;
 
 // Fonts sizes
-$font-size-xs: 12px;
+$font-size-xxs: 12px;
+$font-size-xs: 13px;
 $font-size-sm: 14px;
 $font-size-md: 16px;
 $font-size-xl: 18px;
@@ -34,8 +35,14 @@ $bg-optional-white: #fbfcff;
 $bg-second-optional-white: #f1f4f8;
 
 // Buttons colors
+$bg-border-optional-black: #0a0e140f;
+$bg-shadow-optional-black: #02172c1f;
+$bg-shadow-second-optional-black: #02172c0a;
+
+$text-color-dark-blue: #152351;
 
 // Text colors
+$text-darker-blue: #0d171c66;
 $text-dark-blue: #0d171c;
 $text-light-blue: #4f7a96;
 

@@ -32,9 +32,10 @@ export const Example = () => {
 };
 
 // ----------------------------------------
-// import { gql } from "@apollo/client";
-// import { useEffect } from "react";
-// import { client } from "../lib/apollo";
+
+// import { gql } from '@apollo/client';
+// import { useEffect } from 'react';
+// import { client } from '../lib/apollo';
 
 // export const Example = () => {
 //   useEffect(() => {
@@ -47,7 +48,7 @@ export const Example = () => {
 //               english_name
 //             }
 //           }
-//         `,
+//         `
 //       })
 //       .then((result) => console.log(result.data));
 //   }, []);

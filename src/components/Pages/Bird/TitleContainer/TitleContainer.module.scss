@@ -1,0 +1,22 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as mix;
+
+.titleContainer {
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  border-bottom: 1px solid v.$bg-border-light-gray;
+
+  button {
+    padding: 0.8rem 1.2rem;
+    background: v.$bg-absolute-white;
+    border-radius: 1rem;
+    border: 1px solid v.$bg-border-optional-black;
+    box-shadow: 0px 1px 0.5px -1px v.$bg-shadow-optional-black;
+    box-shadow: 0px 2px 4px 0px v.$bg-shadow-second-optional-black;
+
+    @include mix.stylesText(v.$text-color-dark-blue, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+  }
+}
