@@ -8,7 +8,7 @@ type CardBirdProps = {
   birdsInformation: CardBirdTypes[];
 };
 type CardBirdTypes = {
-  id: number;
+  id: string;
   english_name: string;
   latin_name: string;
   thumb_url: string;
@@ -17,7 +17,7 @@ type CardBirdTypes = {
 export const CardBird: FC<CardBirdProps> = ({ birdsInformation }) => {
   const { handleNavigate } = useAppNavigate();
 
-  const handleClick = (birdId: number) => {
+  const handleClick = (birdId: string) => {
     handleNavigate(`/bird/${birdId}`);
   };
 

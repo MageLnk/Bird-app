@@ -1,0 +1,11 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as mix;
+
+.title {
+  h1 {
+    @include mix.stylesText(v.$text-dark-blue, v.$font-size-xxxlg, v.$weight-bold, 4rem);
+    span {
+      @include mix.stylesText(v.$text-darker-blue, v.$font-size-xxxlg, v.$weight-bold, 4rem);
+    }
+  }
+}
