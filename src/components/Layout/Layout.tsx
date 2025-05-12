@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 // Components
-import { Sidebar } from "./Sidebar/Sidebar";
+import { Sidebar } from './Sidebar/Sidebar';
 // Styles
-import styles from "./Layout.module.scss";
+import styles from './Layout.module.scss';
 // App
 const Layout = () => {
   return (

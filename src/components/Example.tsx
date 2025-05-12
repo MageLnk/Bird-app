@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, useQuery } from '@apollo/client';
 
 const GET_BIRDS = gql`
   query GetBirds {
@@ -14,14 +14,14 @@ const GET_BIRDS = gql`
 export const Example = () => {
   const { loading, error, data } = useQuery(GET_BIRDS);
 
-  console.log("Loading:", loading);
-  console.log("Error:", error);
-  console.log("Data:", data);
+  console.log('Loading:', loading);
+  console.log('Error:', error);
+  console.log('Data:', data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log("Response from server", data);
+  console.log('Response from server', data);
   return (
     <ul>
       {data.birds.map((bird: any) => (

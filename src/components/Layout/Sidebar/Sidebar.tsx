@@ -1,7 +1,7 @@
 // Components
-import { Navigation } from "./Navigation/Navigation";
+import { Navigation } from './Navigation/Navigation';
 // Styles
-import styles from "./Sidebar.module.scss";
+import styles from './Sidebar.module.scss';
 // App
 export const Sidebar = () => {
   return (

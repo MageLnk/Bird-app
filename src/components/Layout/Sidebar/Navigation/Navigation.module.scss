@@ -1,5 +1,5 @@
-@use "../../../../styles/variables" as v;
-@use "../../../../styles/mixins" as mix;
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as mix;
 
 .navigation {
   width: 100%;
@@ -9,11 +9,6 @@
   cursor: pointer;
 
   p {
-    @include mix.stylesText(
-      v.$text-dark-blue,
-      v.$font-size-sm,
-      v.$weight-semi-bold,
-      2.1rem
-    );
+    @include mix.stylesText(v.$text-dark-blue, v.$font-size-sm, v.$weight-semi-bold, 2.1rem);
   }
 }

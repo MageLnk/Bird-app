@@ -3,9 +3,9 @@
   height: 100dvh;
   display: grid;
   grid-template-areas:
-    "Sidebar Content"
-    "Sidebar Content"
-    "Sidebar Content";
+    'Sidebar Content'
+    'Sidebar Content'
+    'Sidebar Content';
 
   grid-template-columns: auto 1fr;
   grid-template-rows: auto;
