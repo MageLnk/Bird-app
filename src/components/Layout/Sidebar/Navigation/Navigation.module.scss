@@ -1,0 +1,19 @@
+@use "../../../../styles/variables" as v;
+@use "../../../../styles/mixins" as mix;
+
+.navigation {
+  width: 100%;
+  background-color: v.$bg-dark-blue;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+
+  p {
+    @include mix.stylesText(
+      v.$text-dark-blue,
+      v.$font-size-sm,
+      v.$weight-semi-bold,
+      2.1rem
+    );
+  }
+}
