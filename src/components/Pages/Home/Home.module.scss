@@ -1,0 +1,16 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as mix;
+
+.home {
+  width: 100%;
+  height: 100%;
+  &__title {
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2.4rem;
+    h1 {
+      @include mix.stylesText(v.$text-dark-blue, v.$font-size-xxxlg, v.$weight-bold, 4rem);
+    }
+  }
+}

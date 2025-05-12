@@ -1,13 +1,8 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 // Components
-import Home from "../components/Pages/Home/Home";
-import Bird from "../components/Pages/Bird/Bird";
-import Layout from "../components/Layout/Layout";
+import Home from '../components/Pages/Home/Home';
+import Bird from '../components/Pages/Bird/Bird';
+import Layout from '../components/Layout/Layout';
 // App
 const RoutesApp = () => {
   return (
