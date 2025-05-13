@@ -1,0 +1,132 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as mix;
+
+.addNote {
+  button {
+    padding: 0.8rem 1.2rem;
+    background: v.$bg-absolute-white;
+    border-radius: 1rem;
+    border: 1px solid v.$bg-border-optional-black;
+    box-shadow: 0px 1px 0.5px -1px v.$bg-shadow-optional-black;
+    box-shadow: 0px 2px 4px 0px v.$bg-shadow-second-optional-black;
+
+    @include mix.stylesText(v.$text-color-dark-blue, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+  }
+
+  &__modalContainer {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42.4rem;
+    height: auto;
+    background-color: v.$bg-absolute-white;
+    border: 1px solid v.$bg-border-optional-black;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 60px 0px #00000029;
+    box-shadow: 0px 32px 32px -16px #00000014;
+    box-shadow: 0px 68px 68px -32px #00000014;
+
+    .modalContainer__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.6rem;
+
+      .top__title {
+        @include mix.stylesText(v.$text-dark-blue, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+      }
+
+      .top__closeModal {
+        cursor: pointer;
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          @include mix.stylesText(v.$text-color-dark-blue, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+        }
+      }
+    }
+
+    .modalContainer__location {
+      padding: 1.6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      p {
+        @include mix.stylesText(v.$text-light-gray, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+      }
+      input {
+        width: 100%;
+        height: 3.2rem;
+        padding: 0.8rem 1rem;
+        background: #4d76a714;
+        border: none;
+      }
+    }
+
+    .modalContainer__notes {
+      padding: 1.6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      p {
+        @include mix.stylesText(v.$text-light-gray, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+      }
+
+      textarea {
+        width: 100%;
+        height: 7.6rem;
+        padding: 0.8rem 1rem;
+        background: #4d76a714;
+        border: none;
+        display: flex;
+        resize: none;
+      }
+    }
+
+    .modalContainer__buttons {
+      width: 100%;
+      padding: 1.6rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.6rem;
+      border-top: 1px solid #e9eaea;
+
+      .buttons__cancel {
+        padding: 0.8rem 1.2rem;
+        background: v.$bg-absolute-white;
+        border: 1px solid #0a0e140f;
+        box-shadow: 0px 1px 0.5px -1px #02172c1f;
+        box-shadow: 0px 2px 4px 0px #02172c0a;
+        @include mix.stylesText(v.$text-color-dark-blue, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+      }
+
+      .buttons__addNote {
+        padding: 0.8rem 1.2rem;
+        background: #1d60f0;
+        opacity: 50%;
+        border: 1px solid #0a0e140f;
+        box-shadow: 0px 1px 1px -1px #02172c1f;
+        box-shadow: 0px 2px 4px 0px #02172c0a;
+        @include mix.stylesText(v.$bg-absolute-white, v.$font-size-xs, v.$weight-semi-bold, 1.6rem);
+      }
+    }
+  }
+}
+
+.bg__addNote {
+  position: absolute;
+  background-color: v.$bg-transparent-white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
