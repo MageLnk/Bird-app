@@ -4,17 +4,13 @@ import { useAppNavigate } from '../../../../shared/useAppNavigate/useAppNavigate
 import styles from './CardBird.module.scss';
 // Types & Interfaces
 import type { FC } from 'react';
+import { CardBirdTypes } from '../../../../../interfaces/services/CardBirdTypes';
 type CardBirdProps = {
   birdsInformation: {
     birds: CardBirdTypes[];
   };
 };
-type CardBirdTypes = {
-  id: string;
-  english_name: string;
-  latin_name: string;
-  thumb_url: string;
-};
+
 // App
 export const CardBird: FC<CardBirdProps> = ({ birdsInformation }) => {
   const { handleNavigate } = useAppNavigate();
