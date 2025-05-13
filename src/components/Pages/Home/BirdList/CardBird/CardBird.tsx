@@ -5,7 +5,9 @@ import styles from './CardBird.module.scss';
 // Types & Interfaces
 import type { FC } from 'react';
 type CardBirdProps = {
-  birdsInformation: CardBirdTypes[];
+  birdsInformation: {
+    birds: CardBirdTypes[];
+  };
 };
 type CardBirdTypes = {
   id: string;
@@ -17,13 +19,15 @@ type CardBirdTypes = {
 export const CardBird: FC<CardBirdProps> = ({ birdsInformation }) => {
   const { handleNavigate } = useAppNavigate();
 
+  const { birds } = birdsInformation;
+
   const handleClick = (birdId: string) => {
     handleNavigate(`/bird/${birdId}`);
   };
 
   return (
     <>
-      {birdsInformation.map((bird) => (
+      {birds.map((bird) => (
         <div key={bird.id} className={styles.cardBird} onClick={() => handleClick(bird.id)}>
           <img src={bird.thumb_url} alt={bird.english_name} />
           <div className={styles.cardBird__birdInfo}>
