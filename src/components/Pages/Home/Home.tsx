@@ -3,6 +3,7 @@ import { BirdList } from './BirdList/BirdList';
 import { SearchBirdBar } from './SearchBirdBar/SearchBirdBar';
 // Styles
 import styles from './Home.module.scss';
+import { Example } from '../../Example';
 // App
 const Home = () => {
   return (
@@ -18,6 +19,8 @@ const Home = () => {
       <section className={styles.home__birdList}>
         <BirdList />
       </section>
+
+      <Example />
     </section>
   );
 };
