@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 // Components
 import { Title } from './Title/Title';
+import { AddNote } from './Button/AddNote';
 // Hooks
 import { useAppNavigate } from '../../../shared/useAppNavigate/useAppNavigate';
 // Utils
@@ -22,7 +23,8 @@ export const TitleContainer = () => {
   return (
     <div className={styles.titleContainer}>
       <Title birdsInformation={birdsInformation} id={id} />
-      <button>Add note</button>
+
+      <AddNote />
     </div>
   );
 };
